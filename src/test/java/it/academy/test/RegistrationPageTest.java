@@ -1,8 +1,8 @@
 package it.academy.test;
 
-import it.academy.pom.FormPage;
+import it.academy.pom.LoginPage;
 import it.academy.pom.RegistrationPage;
-import it.academy.pom.RegisteredUserPage;
+import it.academy.pom.HomePage;
 import org.junit.jupiter.api.Test;
 
 import static it.academy.utils.GenerateDataUtils.generateRandomNumber;
@@ -10,17 +10,17 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class RegistrationPageTest extends BaseTest {
 
-    private FormPage homePage;
+    private LoginPage loginPage;
     private RegistrationPage registrationPage;
-    private RegisteredUserPage userPage;
+    private HomePage homePage;
 
     @Test
     public void accountRegistrationSuccessful() {
-        homePage = new FormPage(driver);
+        loginPage = new LoginPage(driver);
         registrationPage = new RegistrationPage(driver);
-        userPage = new RegisteredUserPage(driver);
+        homePage = new HomePage(driver);
 
-        homePage.openRegistrationPage();
+        loginPage.openRegistrationPage();
         registrationPage.enterName("Name" + generateRandomNumber());
         String password = "Password" + generateRandomNumber();
         registrationPage.enterPassword(password);
@@ -28,21 +28,22 @@ public class RegistrationPageTest extends BaseTest {
         registrationPage.submitRegistrationForm();
 
         String expectedMessage = "Skaičiuotuvas jautrus neigiamiems skaičiams ;)";
-        assertEquals(expectedMessage, userPage.getSuccessMessage(), "User is not on home page, registration failed");
+        assertEquals(expectedMessage, homePage.getSuccessMessage(), "User could not be registered");
     }
 
     @Test
     public void accountRegistrationFailedWhenPasswordDoesNotMatch() {
-        homePage = new FormPage(driver);
+        loginPage = new LoginPage(driver);
         registrationPage = new RegistrationPage(driver);
 
-        homePage.openRegistrationPage();
+        loginPage.openRegistrationPage();
         registrationPage.enterName("Name" + generateRandomNumber());
         registrationPage.enterPassword("Password" + generateRandomNumber());
         registrationPage.confirmPassword("Password" + generateRandomNumber());
         registrationPage.submitRegistrationForm();
 
         String expectedMessage = "Įvesti slaptažodžiai nesutampa";
-        assertEquals(expectedMessage, registrationPage.getErrorMessage(), "User must get error message when password does not match");
+        assertEquals(expectedMessage, registrationPage.getErrorMessage()
+                , "User must get error message when password does not match");
     }
 }

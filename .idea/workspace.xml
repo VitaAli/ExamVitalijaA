@@ -5,13 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53106bf9-5494-44e2-8956-be77a95c556b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/academy/pom/FormPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/academy/pom/RegisteredUserPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/academy/pom/RegistrationPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/academy/utils/GenerateDataUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/it/academy/test/RegistrationPageTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/academy/pom/LoginPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/academy/pom/OperationsPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/academy/pom/RecordPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/it/academy/test/HomePageTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/it/academy/test/LoginPageTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/it/academy/test/OperationPageTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/it/academy/test/SuitTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/academy/pom/AbstractPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/academy/pom/AbstractPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/academy/pom/FormPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/academy/pom/RegisteredUserPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/academy/pom/HomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/it/academy/test/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/it/academy/test/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/it/academy/test/RegistrationPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/it/academy/test/RegistrationPageTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,11 +47,12 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false"
+    "WebServerToolWindowFactoryState": "false",
+    "nodejs_package_manager_path": "npm"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.RegistrationPageTest.accountRegistrationFailedWhenPasswordDoesNotMatch">
-    <configuration name="RegistrationPageTest.accountRegisteredSuccessfully" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.OperationPageTest.resultCannotBeFoundIfItHasNotBeenEntered">
+    <configuration name="HomePageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ExamVitalijaA" />
       <extension name="coverage">
         <pattern>
@@ -54,14 +61,29 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="it.academy.test" />
-      <option name="MAIN_CLASS_NAME" value="it.academy.test.RegistrationPageTest" />
-      <option name="METHOD_NAME" value="accountRegisteredSuccessfully" />
+      <option name="MAIN_CLASS_NAME" value="it.academy.test.HomePageTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HomePageTest.numberCannotBeDividedByZero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ExamVitalijaA" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="it.academy.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="it.academy.test" />
+      <option name="MAIN_CLASS_NAME" value="it.academy.test.HomePageTest" />
+      <option name="METHOD_NAME" value="numberCannotBeDividedByZero" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RegistrationPageTest.accountRegistrationFailedWhenPasswordDoesNotMatch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HomePageTest.numbersCanBeAddedUp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ExamVitalijaA" />
       <extension name="coverage">
         <pattern>
@@ -70,8 +92,40 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="it.academy.test" />
-      <option name="MAIN_CLASS_NAME" value="it.academy.test.RegistrationPageTest" />
-      <option name="METHOD_NAME" value="accountRegistrationFailedWhenPasswordDoesNotMatch" />
+      <option name="MAIN_CLASS_NAME" value="it.academy.test.HomePageTest" />
+      <option name="METHOD_NAME" value="numbersCanBeAddedUp" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OperationPageTest.recordCanBeFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ExamVitalijaA" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="it.academy.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="it.academy.test" />
+      <option name="MAIN_CLASS_NAME" value="it.academy.test.OperationPageTest" />
+      <option name="METHOD_NAME" value="recordCanBeFound" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OperationPageTest.resultCannotBeFoundIfItHasNotBeenEntered" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ExamVitalijaA" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="it.academy.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="it.academy.test" />
+      <option name="MAIN_CLASS_NAME" value="it.academy.test.OperationPageTest" />
+      <option name="METHOD_NAME" value="resultCannotBeFoundIfItHasNotBeenEntered" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -79,8 +133,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.RegistrationPageTest.accountRegistrationFailedWhenPasswordDoesNotMatch" />
-        <item itemvalue="JUnit.RegistrationPageTest.accountRegisteredSuccessfully" />
+        <item itemvalue="JUnit.OperationPageTest.resultCannotBeFoundIfItHasNotBeenEntered" />
+        <item itemvalue="JUnit.OperationPageTest.recordCanBeFound" />
+        <item itemvalue="JUnit.HomePageTest" />
+        <item itemvalue="JUnit.HomePageTest.numberCannotBeDividedByZero" />
+        <item itemvalue="JUnit.HomePageTest.numbersCanBeAddedUp" />
       </list>
     </recent_temporary>
   </component>
@@ -92,7 +149,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1687950152202</updated>
-      <workItem from="1687950153970" duration="3567000" />
+      <workItem from="1687950153970" duration="14712000" />
     </task>
     <servers />
   </component>
