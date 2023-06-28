@@ -11,10 +11,9 @@ public class BaseTest {
 
     @BeforeEach
     public void setUp() {
-//        System.setProperty("webdriver.http.factory", "jdk-http-client");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.get("https://op.akademijait.vtmc.lt/");
+        driver.get("http://localhost:8080/prisijungti");
     }
 
     @AfterEach
